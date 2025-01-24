@@ -1,0 +1,71 @@
+.modalDialog_articles {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+	overflow-y: auto;
+	height: 100%;
+	
+
+}
+.modalDialog_articles:target {
+	opacity:1;
+	
+	pointer-events: auto;
+}
+.modalDialog_articles > div {
+	width: 75%;
+	position: relative;
+	margin: 5% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	
+	background: rgba(15, 15, 15, 0.429);
+	
+  -webkit-transition: opacity 400ms ease-in;
+-moz-transition: opacity 400ms ease-in;
+transition: opacity 400ms ease-in;
+
+
+}
+.close {
+	background: #88888e;
+	color: #761414;
+	text-color:red;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #ad0a0a;
+	-webkit-box-shadow: 1px 1px 3px #df1313;
+	box-shadow: 1px 1px 3px #ed0808;
+}
+.close:hover { background: #8de983; }
+
+ @media screen and (max-width: 50em) {
+	.modalDialog_articles > div {
+	width: 90%;
+	}
+ }
+	.scroll {
+		max-height: 100%;
+		overflow: auto; /* Enable scrolling for the section */
+		padding-right: 10px; /* Add space for scrollbars */
+	}
+	
